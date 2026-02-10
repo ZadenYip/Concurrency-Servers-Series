@@ -1,7 +1,13 @@
 {
 	"folders": [
 		{
-			"path": "part-1"
+			"path": "."
+		}
+		{
+			"path": "rust"
+		},
+		{
+			"path": "go"
 		}
 	],
 	"settings": {}
