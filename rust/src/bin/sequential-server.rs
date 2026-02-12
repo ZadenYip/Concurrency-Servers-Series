@@ -1,8 +1,6 @@
 use std::{io::{Read, Write}, net::TcpListener};
 
-use crate::utils::report_peer_connected;
-
-mod utils;
+use utils;
 
 enum ProcessingState {
     WaitForMsg,
@@ -23,7 +21,7 @@ fn main() {
     
     loop {
         let (connection, addr) = listener.accept().expect("ERROR on accept");
-        report_peer_connected(addr);
+        utils::report_peer_connected(addr);
         serve_connection(connection);
         println!("peer done");
     }
