@@ -34,7 +34,7 @@ fn main() {
 fn server_thread(stream: TcpStream) {
     let thread_id = thread::current().id();
 
-    println!("Thrread {:?} created to handle connection with socket {}", thread_id, stream.as_raw_socket());
+    println!("Thread {:?} created to handle connection with socket {}", thread_id, stream.as_raw_socket());
     serve_connection(stream);
     println!("Thread {:?} done", thread_id);
 }
